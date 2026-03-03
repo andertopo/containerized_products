@@ -1,0 +1,22 @@
+<form action="/categories" method="POST">
+    <fieldset>
+        <legend>Nueva Categoria</legend>
+        <div class="input-wrapper">
+            <input type="text" id="name" name="name" class="input-field" placeholder=" " required />
+            <label for="name" class="input-label">Nombre</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" id="description" name="description" class="input-field" placeholder=" " required />
+            <label for="description" class="input-label">Descripción</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" id="priority" name="priority" class="input-field" placeholder=" " required />
+            <label for="priority" class="input-label">Prioridad</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" id="tags" name="tags" class="input-field" placeholder=" " required />
+            <label for="tags" class="input-label">Tags (,)</label>
+        </div>
+    </fieldset>
+    <button type="submit">Enviar</button>
+</form>

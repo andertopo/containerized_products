@@ -1,0 +1,30 @@
+<form action="/products" method="POST">
+    <fieldset>
+        <legend>Nuevo Producto</legend>
+        <div class="input-wrapper">
+            <input type="text" id="name" name="name" class="input-field" placeholder=" " required />
+            <label for="name" class="input-label">Nombre</label>
+        </div>
+        <div class="input-wrapper">
+            <select id="category" name="category" class="input-field">
+                <option value="-1">Seleccione una categoría</option>
+                {{#each categories}}
+                <option value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="input-wrapper">
+            <input type="number" id="price" name="price" class="input-field" placeholder=" " required />
+            <label for="price" class="input-label">Precio</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" id="stock" name="stock" class="input-field" placeholder=" " required />
+            <label for="stock" class="input-label">Stock Inicial</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" id="tags" name="tags" class="input-field" placeholder=" " required />
+            <label for="tags" class="input-label">Tags (,)</label>
+        </div>
+    </fieldset>
+    <button type="submit">Enviar</button>
+</form>

@@ -1,0 +1,47 @@
+<table class="list-group">
+    <caption>Listado de Categorías</caption>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Activo</th>
+            <th>Prioridad</th>
+            <th>fecha de creación</th>
+        </tr>
+    </thead>
+    {{#each categories}}
+    <tr>
+        <td class="list-group-item">
+            {{this.id}}
+        </td>
+        <td class="list-group-item">
+            {{this.name}}
+        </td>
+        <td class="list-group-item">
+            {{this.description}}
+        </td>
+        <td class="list-group-item">
+            {{#if this.is_active}}
+                Sí
+            {{else}}
+                No
+            {{/if}}
+        </td>
+        <td class="list-group-item">
+            {{this.priority}}
+        </td>
+        <td class="list-group-item">
+            {{this.create_date}}
+        </td>
+    </tr>
+    {{/each}}
+</table>
+<div>
+    <caption>
+        <a class="link" href="/">Ir a productos</a>
+    </caption>
+    <caption>
+        <a class="link" href="/new-category">Crear Categoria</a>
+    </caption>
+</div>

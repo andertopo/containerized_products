@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Containerized App</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            /* Collapses borders into a single border */
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            /* Optional: adds rounded corners to the table */
+            overflow: hidden;
+            /* Ensures the border radius is visible */
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Style the table header */
+        thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Style table header and data cells */
+        th,
+        td {
+            padding: 12px 15px;
+            /* Adds space between border and content */
+            border: 1px solid #dddddd;
+            /* Adds a light border to all cells */
+        }
+
+        /* Style the table body rows for striped effect */
+        tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+            /* Zebra-styled striping */
+        }
+
+        tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+            /* Highlights the last row with the header color */
+        }
+
+        /* Add a hover effect to rows */
+        tbody tr:hover {
+            background-color: #e2e2e2;
+            cursor: pointer;
+        }
+
+        .tag {
+            margin: 8px;
+            padding: 4px;
+            text-align: center;
+            background-color: rgba(0, 152, 121, 0.5);
+        }
+
+        .link {
+            padding: 16px;
+            text-align: center;
+            border-radius: 20px;
+            background-color: #009879;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        fieldset {
+            width: 500px;
+            border: 2px solid #dddddd;
+            border-radius: 5px;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+
+        legend {
+            background-color: #009879;
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        .input-wrapper {
+            position: relative;
+            /* Container for absolute positioning of the label */
+            margin-bottom: 1.5rem;
+        }
+
+        .input-field {
+            width: calc(100% - 30px);
+            padding: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: transparent;
+            color: #333;
+            outline: none;
+            /* Removes default focus outline */
+            transition: border-color 0.3s;
+        }
+
+        .input-label {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            /* Vertically centers the label */
+            color: #999;
+            pointer-events: none;
+            /* Allows clicks to pass through to the input */
+            transition: all 0.3s ease;
+            background-color: white;
+            /* Matches page background to hide line under label */
+            padding: 0 0.25rem;
+        }
+
+        /* Styles the input when it is focused */
+        .input-field:focus {
+            border-color: #009879;
+            /* Blue border on focus */
+        }
+
+        /* Moves the label up when input is focused OR has text (is valid) */
+        .input-field:focus+.input-label,
+        .input-field:not(:placeholder-shown)+.input-label {
+            top: 0;
+            /* Moves to the top */
+            font-size: 0.8rem;
+            color: #009879;
+        }
+
+        button {
+            padding: 8px;
+            border-radius: 50px;
+            background-color: #009879;
+            color: #ffffff;
+            min-width: 150px;
+            border: none;
+            margin: 16px 0;
+            font-weight: bold;
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    {{{body}}} <!-- Placeholder for actual view content -->
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<table class="list-group">
+    <caption>Listado de Productos</caption>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>stock</th>
+            <th>Última actualización</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+    {{#each products}}
+    <tr>
+        <td class="list-group-item">
+            {{this.sku}}
+        </td>
+        <td class="list-group-item">
+            {{this.product_name}}
+        </td>
+        <td class="list-group-item">
+            {{this.category_id}}
+        </td>
+        <td class="list-group-item">
+            {{this.price}}
+        </td>
+        <td class="list-group-item">
+            {{this.current_stock}}
+        </td>
+        <td class="list-group-item">
+            {{this.last_update}}
+        </td>
+        <td class="list-group-item">
+            {{#each this.tags}}
+            <div class="tag">
+                {{this}}
+            </div>
+            {{/each}}
+        </td>
+    </tr>
+    {{/each}}
+</table>
+<div>
+    <caption>
+        <a class="link" href="/categories">Ir a Categorias</a>
+    </caption>
+    <caption>
+        <a class="link" href="/new-product">Crear Proucto</a>
+    </caption>
+</div>
