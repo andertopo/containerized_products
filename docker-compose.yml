@@ -10,6 +10,7 @@ services:
     volumes:
       # Copia el SQL local al directorio de inicialización del contenedor
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgress_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
 
@@ -26,3 +27,5 @@ services:
       DB_PASSWORD: C0nt41n3r1z3d_p4ssw0rd
       DB_NAME: containerized_db
       DB_PORT: 5432
+volumes:
+  postgress_data:
