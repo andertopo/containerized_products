@@ -10,7 +10,7 @@ CREATE TABLE tbl_categories (
 
 CREATE TABLE tbl_products (
     sku UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    category_id INTEGER REFERENCES categorias(id),
+    category_id INTEGER REFERENCES tbl_categories(id),
     product_name TEXT NOT NULL,
     price NUMERIC(10,2),
     current_stock INTEGER DEFAULT 0,

@@ -1,0 +1,28 @@
+services:
+  db:
+    container_name: containerized_products_db
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: C0nt41n3r1z3d_p4ssw0rd
+      POSTGRES_DB: containerized_db
+    volumes:
+      # Copia el SQL local al directorio de inicialización del contenedor
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  app:
+    container_name: containerized_products_app
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: user
+      DB_PASSWORD: C0nt41n3r1z3d_p4ssw0rd
+      DB_NAME: containerized_db
+      DB_PORT: 5432
