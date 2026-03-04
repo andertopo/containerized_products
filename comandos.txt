@@ -1,0 +1,41 @@
+Gestión de Imágenes (Docker Images) 
+
+    docker pull <imagen>: Descarga una imagen desde un registro (ej. Docker Hub).
+    docker images: Lista todas las imágenes locales disponibles.
+    docker build -t <nombre> .: Construye una imagen a partir de un Dockerfile.
+    docker rmi <imagen>: Elimina una o más imágenes.
+    docker image prune: Elimina imágenes no utilizadas (dangling).
+    docker tag <imagen> <nuevo_nombre>:<tag>: Etiqueta una imagen local.
+    docker push <imagen>: Sube una imagen a un registro.
+    docker history <imagen>: Muestra el historial de capas de una imagen.
+    docker save -o <archivo.tar> <imagen>: Guarda una imagen en un archivo tar.
+    docker load -i <archivo.tar>: Carga una imagen desde un archivo tar. 
+
+Gestión de Contenedores (Docker Containers)
+
+    docker run <imagen>: Crea y ejecuta un contenedor.
+    docker run -d <imagen>: Ejecuta un contenedor en modo desatendido (background).
+    docker run -p <host>:<container> <imagen>: Mapea puertos entre el host y el contenedor.
+    docker ps: Lista los contenedores en ejecución.
+    docker ps -a: Lista todos los contenedores (incluidos los detenidos).
+    docker stop <contenedor>: Detiene un contenedor en ejecución.
+    docker start <contenedor>: Inicia un contenedor detenido.
+    docker restart <contenedor>: Reinicia un contenedor.
+    docker rm <contenedor>: Elimina un contenedor detenido.
+    docker exec -it <contenedor> /bin/bash: Entra en un contenedor en ejecución.
+    docker logs -f <contenedor>: Muestra los logs en tiempo real.
+    docker inspect <contenedor>: Muestra información detallada del contenedor.
+    docker top <contenedor>: Muestra los procesos en ejecución del contenedor.
+    docker cp <origen> <destino>: Copia archivos entre el host y el contenedor. 
+
+Volúmenes y Redes (Volumes & Networks)
+
+    docker volume ls: Lista los volúmenes de datos.
+    docker volume create <nombre>: Crea un nuevo volumen.
+    docker volume rm <nombre>: Elimina un volumen.
+    docker network ls: Lista las redes de Docker.
+    docker network create <nombre>: Crea una red. 
+
+Información y Limpieza
+
+    docker system prune -a: Limpia todo el sistema (contenedores detenidos, redes no utilizadas e imágenes sin uso). 
